@@ -1,5 +1,13 @@
 function login(username, password) {
-    return username === "admin" && password === "123";
+    if (username === "locked") {
+        return false;
+    }
+
+    if (username === "admin" && password === "123") {
+        return true;
+    }
+
+    return false;
 }
 
-module.exports = { login };
+module.exports = { login };    
